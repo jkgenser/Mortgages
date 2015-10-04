@@ -22,9 +22,9 @@ function getColor(odds){
 function style(feature) {
     return {
         fillColor: getColor(feature.properties.black_coeff),
-        weight: 3,
+        weight: 1.5,
         opacity: 1,
-        color: 'white',
+        color: '#f0f0f0',
         dashArray: '3',
         fillOpacity: 0.7
     };
@@ -95,7 +95,7 @@ info.update = function (props) {
           (props ?
         '<b>' + props.name + '</b><br />' + props.black_coeff.toFixed(2) + ' = black loan difficulty index (white odds:black odds)'+ 
         '<br>' + addCommas(props.tot_apps.toString()) + ' mortgage loan applications in the state in 2014.' + 
-        '<br>' + percentBuilder(props.black_share.toString()) + ' share of applicants were black.'
+        '<br>' + percentBuilder(props.black_share.toString()) + ' of applicants were black.'
         : 'Move your pointer over a state');
 };
 
