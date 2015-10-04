@@ -93,7 +93,7 @@ var percentBuilder = function(str) {
 info.update = function (props) {
     this._div.innerHTML = '<h4>How much harder is it for black people to get loans?</h4>' +
           (props ?
-        '<b>' + props.name + '</b><br />' + props.black_coeff.toFixed(2) + ' = black loan difficulty index' +
+        '<b>' + props.name + '</b><br />' + props.black_coeff.toFixed(2) + ' = black loan difficulty index (white odds:black odds)'+ 
         '<br>' + addCommas(props.tot_apps.toString()) + ' mortgage loan applications in the state in 2014.' + 
         '<br>' + percentBuilder(props.black_share.toString()) + ' share of applicants were black.'
         : 'Move your pointer over a state');
